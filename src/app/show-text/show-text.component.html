@@ -1,0 +1,3 @@
+<div class="main">
+  <a *ngFor="let text of texts;" [ngStyle]="{'color': convertColorName(text.value), 'font-size': text.level*3+'px'}" > {{ text.value }}</a>
+</div>
