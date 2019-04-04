@@ -12,6 +12,7 @@ export class ShowTextComponent implements OnInit {
   public texts: Text[] = [];
   public isError = false;
   public errorMessages = 'Cannot connect with resources';
+  public wrong;
 
 
   constructor(private textService: TextsService) { }
@@ -24,7 +25,7 @@ export class ShowTextComponent implements OnInit {
         console.log(this.texts);
     },
       error => {
-        this.errorMessages = error;
+        this.wrong = error;
         this.isError = true;
       }
   );

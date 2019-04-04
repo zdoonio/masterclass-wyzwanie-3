@@ -1,3 +1,6 @@
-<div class="main">
+<div class="main" *ngIf="!isError">
   <a *ngFor="let text of texts;" [ngStyle]="{'color': convertColorName(text.value), 'font-size': text.level*3+'px'}" > {{ text.value }}</a>
+</div>
+<div *ngIf="isError">
+  <a [style.color]="'red'">{{ errorMessages.valueOf() }}</a>
 </div>
