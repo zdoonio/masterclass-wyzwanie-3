@@ -8,7 +8,7 @@ import {Observable} from 'rxjs';
 })
 export class TextsService {
 
-  private nameUrl = '/assets/texts.json';
+  private nameUrl = './assets/texts.json';
 
   constructor(private httpClient: HttpClient) { }
 
